@@ -1,3 +1,6 @@
+# svt-template
+starter template for a Svelte app with Vite and Tailwind configured & ready-to-go
+
 # Svelte + Vite
 
 This template should help get you started developing with Svelte in Vite.
