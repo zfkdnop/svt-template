@@ -1,7 +1,33 @@
 # svt-template
 starter template for a Svelte app with Vite and Tailwind configured & ready-to-go
 
-# Svelte + Vite
+## 
+
+```/* **
+ * PRODUCTION BUILDS require modification in order to work with CyTube
+ * **
+ * To avoid conflicts between [the] two apps one of them needs to be introducted into a separate namespace.
+ * 
+ * [22:10:00] Person: Did you just add the line at the top w/ BabylonFive_NS and the bits with "__NS"
+ * [22:11:31] Homie: Yep. Created the namespace. Created the ModuleWrapper function to establish it, and exported your main app class and instance through the namespace
+ * [22:11:47] Homie: that way all of your functions don't automatically become globalized. 
+ * 
+ *  window['BabylonFive_NS'] = {};
+ *  (function BabylonFive_ModuleWrapper(__NS){
+ * 
+ *      ... svelte compiled code ...
+ * 
+ *  __NS['MainAppInstance'] = new me({
+ *     target: document.getElementById("cysvcreq")
+ *  }); // this (__NS['MainAppInstance']) needs to partially replace/change the end of the compiled code
+ * 
+ *  __NS['MainAppClass'] = me;
+ *  })(window.BabylonFive_NS);
+ * 
+ **/
+```
+
+## Svelte + Vite
 
 This template should help get you started developing with Svelte in Vite.
 
